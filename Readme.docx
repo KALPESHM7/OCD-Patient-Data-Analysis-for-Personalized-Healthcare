@@ -1,0 +1,41 @@
+OCD Patient Data Analysis for Personalized Healthcare
+
+Project Overview
+This project focuses on analyzing OCD patient data to uncover trends, group patients based on symptom severity, and predict medication effectiveness using machine learning techniques.
+ The goal is to provide actionable insights that drive personalized healthcare strategies.
+
+Objective
+The objective of this project is to:
+- Analyze patient demographics, symptoms, and treatment data.
+- Group patients into clusters based on symptom severity using clustering techniques.
+- Predict the effectiveness of medications like SSRIs using classification models.
+
+Steps Involved
+ 1. Data Cleaning
+- Handled missing values by replacing them with "Not Reported".
+- Removed outliers using IQR and Isolation Forest techniques.
+- Eliminated duplicate records for consistency.
+
+2. Exploratory Data Analysis (EDA)
+- Visualized demographic distributions (e.g., age, gender).
+- Identified correlations between obsession and compulsion scores.
+- Analyzed trends in diagnoses over time.
+
+3. Feature Engineering
+- Scaled numerical features (`Age`, `Y-BOCS Scores`) using StandardScaler.
+- Encoded categorical features (`Gender`, `Medications`) via one-hot encoding.
+- Created a new feature: `Symptom_Duration_Per_Year`.
+
+4. Model Building
+Clustering:
+- Applied K-Means clustering to group patients into clusters based on symptoms and demographics.
+
+Classification:
+- Built a Logistic Regression model to predict medication effectiveness (e.g., SSRIs).
+
+Tools Used
+- Python (Pandas, Scikit-learn, Matplotlib, Seaborn)
+- Jupyter Notebook
+
+How to Run the Project
+1. Clone the repository:

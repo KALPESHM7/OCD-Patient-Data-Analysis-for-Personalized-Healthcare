@@ -1,0 +1,50 @@
+1. Report for Your Project
+Title: “OCD-Patient-Data-Analysis-for-Personalized-Healthcare”
+
+Objective
+The goal of this project is to analyze OCD patient data to uncover trends, group patients based on symptom severity, and predict medication effectiveness. 
+The insights aim to optimize treatment strategies and improve healthcare outcomes.
+
+Data Cleaning
+Missing values in categorical columns (Previous Diagnoses, Medications) were replaced with "Not Reported".
+
+Outliers in numerical columns (e.g., Age) were removed using IQR and Isolation Forest techniques.
+
+Duplicate records were identified and removed for data consistency.
+
+EDA Insights
+Demographics:
+
+Most patients are aged 25–65, with a slight majority being female (60%).
+
+Diagnoses peaked in 2018, possibly due to increased awareness campaigns.
+
+Symptom Severity:
+
+Obsession and compulsion scores are strongly correlated (
+r=0.78
+r=0.78).
+
+Patients on SSRIs show lower average obsession scores compared to Benzodiazepines.
+
+Feature Engineering
+Numerical features (Age, Y-BOCS Scores) were scaled using StandardScaler for better model performance.
+
+Categorical features (Gender, Medications) were encoded using one-hot encoding.
+
+A new feature, Symptom_Duration_Per_Year, was created to represent symptom duration in years.
+
+Model Building
+Clustering (K-Means):
+
+Patients were grouped into 3 clusters:
+
+Cluster 0: Younger patients with mild symptoms.
+
+Cluster 1: Middle-aged patients with moderate symptoms.
+
+Cluster 2: Older patients with severe symptoms.
+
+Classification (Logistic Regression):
+
+The model predicts SSRI effectiveness with an accuracy of 84%.
